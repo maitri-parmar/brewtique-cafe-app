@@ -22,14 +22,14 @@ const Cart = () => {
   };
 
   return (
-    <>
+    <div>
       <Header />
       <div className="cart-container">
         <h2>Your Cart 🛒</h2>
         {cart.length === 0 ? (
           <p>Cart is empty. Add some delicious items!</p>
         ) : (
-          <>
+          <div>
           
             {cart.map((item, index) => (
   <div key={index} className="cart-item">
@@ -41,11 +41,11 @@ const Cart = () => {
             <p className="total-price">Total: ₹{totalPrice}</p>
 
             <button className="place-order-btn" onClick={placeOrder}>Place Order</button>
-          </>
+          </div>
         )}
       </div>
       <Footer />
-    </>
+    </div>
   );
 };
 

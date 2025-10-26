@@ -1,9 +1,8 @@
-import React from 'react';
 
 const Footer = () => (
   <footer style={styles.footer}>
     <p>📍 Brewtique Cafe, Mumbai, India</p>
-    <p>📞 Contact: +91 98765 43210 | ✉️ brewtique@cafe.com</p>
+    <p>📞 Contact: +91 99999 99999 | ✉️ brewtique@cafe.com</p>
     <p>© 2025 Brewtique. All rights reserved.</p>
   </footer>
 );

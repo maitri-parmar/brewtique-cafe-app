@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Header = () => (
@@ -15,7 +14,7 @@ const Header = () => (
 
 const styles = {
   header: {
-    backgroundColor: '#ff914d',
+    backgroundColor: '#ffa34dff',
     padding: '10px 20px',
     display: 'flex',
     justifyContent: 'space-between',
