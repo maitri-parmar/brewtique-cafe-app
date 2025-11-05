@@ -13,21 +13,27 @@ const Menu = () => {
       .then(res => res.json())
       .then(data => setItems(data));
   }, []);
+const renderCategory = (title, filterFn) => (
+  <>
+    <h3 className="category-title">{title}</h3>
+    <div className="menu-grid">
+      {items.filter(filterFn).map(item => (
+        <div key={item.id} className="menu-card">
+          {item.image && (
+  <img src={item.image} alt={item.name} className="menu-image" />
+)}
 
-  const renderCategory = (title, filterFn) => (
-    <>
-      <h3 className="category-title">{title}</h3>
-      <div className="menu-grid">
-        {items.filter(filterFn).map(item => (
-          <div key={item.id} className="menu-card">
+          <div className="menu-details">
             <h4>{item.name}</h4>
             <p>₹{item.price}</p>
-            <button className='btn' onClick={() => addToCart(item)}>Add to Cart</button>
+            <button className="btn" onClick={() => addToCart(item)}>Add to Cart</button>
           </div>
-        ))}
-      </div>
-    </>
-  );
+        </div>
+      ))}
+    </div>
+  </>
+);
+
 
   return (
     <>
