@@ -1,4 +1,5 @@
 .cart-container {
+  background-image: url('https://i.pinimg.com/1200x/d1/c8/93/d1c89356cae6997d236a217bf65b79cb.jpg');
   padding: 40px 20px;
   text-align: center;
 }
@@ -41,7 +42,7 @@
 }
 
 .remove-btn {
-  background-color: #ff914d;
+  background-color: #663f27;
   color: white;
   border: none;
   padding: 6px 14px;
@@ -53,12 +54,12 @@
 }
 
 .remove-btn:hover {
-  background-color: #e67c30;
+  background-color: #804f2d;
 }
 
 .place-order-btn {
   margin-top: 30px;
-  background-color: #ff914d;
+  background-color: #693e23;
   color: white;
   border: none;
   padding: 12px 24px;
@@ -71,5 +72,5 @@
 }
 
 .place-order-btn:hover {
-  background-color: #e67c30;
+  background-color: #3a2211;
 }
