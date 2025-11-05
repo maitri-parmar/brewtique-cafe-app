@@ -1,21 +1,35 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import './Home.css';
 import CCarousel from '../components/CCarousel';
-
+import './Home.css';
 
 const Home = () => (
-  <div>
+  <>
     <Header />
-    <div className="home-container">
-      <h2>Welcome to Brewtique Cafe Manager</h2>
-      <p>☕Manage your menu, track orders, and serve joy ☕</p>
-      <CCarousel />
+    <div className="home-hero">
+      <div className="carousel-bg">
+        <CCarousel />
+      </div>
+      <div className="hero-overlay">
+        <h1>Brewtique</h1>
+        <h3>Your cozy corner for comfort and caffeine</h3>
+        <p>
+          Order your favorite coffee, take a seat, and let the aroma do the magic.
+        </p>
+        <div className="hero-buttons">
+          <button className="btn-primary">Place Your Order</button>
+          <button className="btn-secondary">View Menu</button>
+        </div>
+        <div className="hero-features">
+          <div> 14+ Coffee Blends</div>
+          <div>10+ Fresh Bakes Daily </div>
+          <div> Calm, Cozy Vibes</div>
+        </div>
+      </div>
     </div>
     <Footer />
-  </div>
+  </>
 );
 
 export default Home;
