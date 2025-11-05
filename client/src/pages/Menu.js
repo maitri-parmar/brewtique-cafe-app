@@ -33,12 +33,12 @@ const Menu = () => {
     <>
       <Header />
       <div className="container">
-        <h2 className="menu-heading">🍽️ Brewtique Menu</h2>
-        {renderCategory('☕ Coffee', item => item.category === 'coffee')}
-        {renderCategory('❄️ Cold Coffee', item => item.category === 'cold-coffee')}
-        {renderCategory('🍵 Tea & Non-Coffee', item => item.category === 'tea')}
-        {renderCategory('🌟 Specialty Drinks', item => item.category === 'specialty')}
-        {renderCategory('🍪 Bakery & Snacks', item => item.category === 'snacks')}
+        <h2 className="menu-heading"> Brewtique Menu</h2>
+        {renderCategory(' Coffee', item => item.category === 'coffee')}
+        {renderCategory(' Cold Coffee', item => item.category === 'cold-coffee')}
+        {renderCategory(' Tea & Non-Coffee', item => item.category === 'tea')}
+        {renderCategory('Specialty Drinks', item => item.category === 'specialty')}
+        {renderCategory(' Bakery & Snacks', item => item.category === 'snacks')}
       </div>
       <Footer />
     </>
