@@ -1,40 +1,19 @@
-import { useState } from 'react';
+import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-import '../pages/Home.css';
+import './CCarousel.css';
 
-function CCarousel() {
-  const [index, setIndex] = useState(0);
-
-  const handleSelect = (selectedIndex) => {
-    setIndex(selectedIndex);
-  };
-
-  return (
-    <Carousel data-bs-theme="dark" activeIndex={index} onSelect={handleSelect}>
-      <Carousel.Item>
-       <img
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAdcx7F7LKcKiRxTE9vssegTjFUG1SU7lK3Q&s"
-        alt="Cafe vibe"
-        className="home-img"
-      />
-       
-      </Carousel.Item>
-      <Carousel.Item>
-       <img
-        src="https://media.istockphoto.com/id/1400194993/photo/cappuccino-art.jpg?s=612x612&w=0&k=20&c=_nYOcyQ15cYEeUYgUzkC5qG946nkCwU06NiWKt1s8SE="
-        alt="Cafe vibe"
-        className="home-img"
-      />
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-        src="https://images.pexels.com/photos/1307698/pexels-photo-1307698.jpeg?cs=srgb&dl=pexels-igor-starkov-233202-1307698.jpg&fm=jpg"
-        alt="Cafe vibe"
-        className="home-img"
-      />
-      </Carousel.Item>
-    </Carousel>
-  );
-}
+const CCarousel = () => (
+  <Carousel controls={false} indicators={false} fade interval={4000}>
+    <Carousel.Item>
+      <img src="https://i.pinimg.com/1200x/a4/fc/a0/a4fca06e9c4e376259f04f9bf07080ee.jpg" alt="Slide 1" className="carousel-img" />
+    </Carousel.Item>
+    <Carousel.Item>
+      <img src="https://i.pinimg.com/1200x/ac/8d/92/ac8d9277004a1b04a9119c3e8a607188.jpg" alt="Slide 2" className="carousel-img" />
+    </Carousel.Item>
+    <Carousel.Item>
+      <img src="https://i.pinimg.com/736x/81/c1/d3/81c1d37b8647f884c9ac1c18453cc81c.jpg" alt="Slide 3" className="carousel-img" />
+    </Carousel.Item>
+  </Carousel>
+);
 
 export default CCarousel;
