@@ -1,11 +1,28 @@
 const express = require('express');
 const cors = require('cors');
+const mongoose = require('mongoose');
+require('dotenv').config();
+
+const authRoutes = require('./routes/auth');
+
 const app = express();
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 app.use(cors());
 app.use(express.json());
 
+// MongoDB Connection
+mongoose.connect(process.env.MONGO_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
+.then(() => console.log('✅ MongoDB connected'))
+.catch(err => console.error('❌ MongoDB connection error:', err));
+
+// Routes
+app.use('/api/auth', authRoutes);
+
+// Static Menu
 let menu = [
  { id: 1, name: 'Americano', price: 150, category: 'coffee',image:'https://i.pinimg.com/1200x/cb/48/db/cb48db04009801523739569e0f33cfc3.jpg'  },
 { id: 2, name: 'Cappuccino', price: 180, category: 'coffee', image:'https://i.pinimg.com/736x/52/41/31/52413159c7f291bbc186422481b3ac50.jpg' },
@@ -56,4 +73,4 @@ app.get('/api/orders/:user', (req, res) => {
   res.json(userOrders);
 });
 
-app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
+app.listen(PORT, () => console.log(`🚀 Server running on http://localhost:${PORT}`));
