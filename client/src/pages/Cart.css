@@ -1,76 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .cart-container {
+  @apply text-center px-5 py-10;
   background-image: url('https://i.pinimg.com/1200x/d1/c8/93/d1c89356cae6997d236a217bf65b79cb.jpg');
-  padding: 40px 20px;
-  text-align: center;
+  @apply bg-cover bg-center;
 }
 
 .cart-container h2 {
-  font-size: 28px;
-  margin-bottom: 20px;
-  color: #6b4f4f;
+  @apply text-[28px] mb-5 text-[#6b4f4f];
 }
 
 .cart-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #fff8f0;
-  margin: 10px auto;
-  padding: 12px 20px;
-  border-radius: 10px;
-  width: 80%;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  transition: transform 0.2s ease;
+  @apply flex justify-between items-center bg-[#fff8f0] my-[10px] mx-auto px-5 py-3 rounded-xl w-[80%] shadow-md transition-transform duration-200 ease-in-out;
 }
 
 .cart-item:hover {
-  transform: scale(1.01);
+  @apply scale-[1.01];
 }
 
 .item-name {
-  font-weight: 600;
-  font-size: 16px;
-  color: #333;
-  flex: 1;
-  text-align: left;
+  @apply font-semibold text-[16px] text-[#333] flex-1 text-left;
 }
 
 .item-price {
-  font-size: 16px;
-  color: #444;
-  margin-right: 20px;
+  @apply text-[16px] text-[#444] mr-5;
 }
 
 .remove-btn {
-  background-color: #663f27;
-  color: white;
-  border: none;
-  padding: 6px 14px;
-  border-radius: 20px;
-  cursor: pointer;
-  font-weight: 500;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  transition: background 0.3s ease;
+  @apply bg-[#663f27] text-white border-none px-[14px] py-[6px] rounded-full cursor-pointer font-medium shadow-sm transition-colors duration-300 ease-in-out;
 }
 
 .remove-btn:hover {
-  background-color: #804f2d;
+  @apply bg-[#804f2d];
 }
 
 .place-order-btn {
-  margin-top: 30px;
-  background-color: #693e23;
-  color: white;
-  border: none;
-  padding: 12px 24px;
-  font-size: 16px;
-  border-radius: 30px;
-  cursor: pointer;
-  font-weight: 600;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
-  transition: background 0.3s ease;
+  @apply mt-[30px] bg-[#693e23] text-white border-none px-6 py-3 text-[16px] rounded-full cursor-pointer font-semibold shadow-lg transition-colors duration-300 ease-in-out;
 }
 
 .place-order-btn:hover {
-  background-color: #3a2211;
+  @apply bg-[#3a2211];
 }
+
