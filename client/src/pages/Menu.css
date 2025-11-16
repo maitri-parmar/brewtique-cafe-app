@@ -1,106 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .menu-heading {
-  font-size: 28px;
-  margin-bottom: 20px;
-  color: #3a1a1adb;
-  text-align: center;
+  @apply text-[50px] text-[#3a1a1adb] text-center mb-5 font-[Monotype_Corsiva];
 }
-.container{
+
+.container {
+  @apply bg-cover bg-center min-h-screen w-full p-10 z-[-1];
   background-image: url('https://i.pinimg.com/1200x/c5/92/de/c592de3f71b7807d9e81d3b5bd4ab024.jpg');
-background-size: cover;
-object-fit: cover;
-background-position: center;
-  padding: 40px;
-  min-height: 100vh;
-  z-index: -1;
-   width: 100%;
 }
+
 .category-title {
-  font-family: 'Segoe Script',cursive;
-  font-size: 34px;
-  margin-top: 30px;
-  color: #331a0b;
+  @apply text-[34px] mt-[30px] text-[#331a0b] font-[Segoe_Script];
 }
 
 .menu-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  @apply grid grid-cols-2 gap-5;
 }
 
 .menu-card {
-  background: #fff8f0;
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  text-align: center;
+  @apply flex items-center gap-[15px] bg-[#fff8f0] rounded-lg p-[15px] shadow-md w-full max-w-[500px] mb-5 text-center;
 }
 
 .menu-card h4 {
-  margin: 0;
-  font-size: 18px;
-  color: #333;
+  @apply m-0 text-[18px] text-[#333];
 }
 
 .menu-card p {
-  margin: 5px 0;
-  font-weight: bold;
+  @apply my-[5px] font-bold;
 }
 
 .button-wrapper {
-  margin-top: 10px;
-  display: flex;
-  justify-content: flex-start;
+  @apply mt-[10px] flex justify-start;
 }
 
 .btn {
-  background-color: #5e4434;
-  color: rgb(80, 40, 24);
-  border: none;
-  padding: 10px 16px;
-  border-radius: 6px;
-  font-weight: bold;
-  font-size: 14px;
-  cursor: pointer;
-  transition: 0.3s ease;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  @apply bg-[#5e4434] text-[rgb(80,40,24)] border-none px-4 py-2 rounded-md font-bold text-[14px] cursor-pointer transition duration-300 ease-in-out shadow-md;
 }
 
 .btn:hover {
-  background-color: #ff914d;
-  color: rgb(98, 47, 22);
-  transform: scale(1.05);
+  @apply bg-[#ff914d] text-[rgb(98,47,22)] scale-[1.05];
 }
 
 .btn:active {
-  background-color: #cf7d4a;
-}
-
-
-.menu-heading{
-  font-family: 'Monotype Corsiva',cursive;
-  font-size: 50px;
-}
-.menu-card {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  background-color: #fff8f0;
-  border-radius: 8px;
-  padding: 15px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  width: 100%;
-  max-width: 500px;
-  margin-bottom: 20px;
+  @apply bg-[#cf7d4a];
 }
 
 .menu-image {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 8px;
+  @apply w-[120px] h-[120px] object-cover rounded-lg;
 }
 
 .menu-details {
-  flex: 1;
+  @apply flex-1;
 }
-
