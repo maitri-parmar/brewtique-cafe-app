@@ -1,52 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .orders-container {
+  @apply text-center px-5 py-10;
   background-image: url('https://i.pinimg.com/736x/c9/3e/d0/c93ed04481b97d9647bc40b9fa20b44a.jpg');
-  padding: 40px 20px;
-  text-align: center;
+  @apply bg-cover bg-center;
 }
 
 .orders-container h2 {
-  font-size: 28px;
-  margin-bottom: 20px;
-  color: #ecc6ae;
+  @apply text-[28px] mb-5 text-[#552f18];
 }
 
 .order-card {
-  background: #fff8f0;
-  padding: 20px;
-  margin: 20px auto;
-  border-radius: 12px;
-  width: 80%;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  text-align: left;
+  @apply bg-[#fff8f0] p-5 my-5 mx-auto rounded-xl w-[80%] shadow-lg text-left;
 }
 
 .order-card h4 {
-  margin-bottom: 10px;
-  color: #52321e;
+  @apply mb-[10px] text-[#52321e];
 }
 
 .order-card ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  @apply list-none p-0 m-0;
 }
 
 .order-card li {
-  display: flex;
-  justify-content: space-between;
-  padding: 6px 0;
-  border-bottom: 1px dashed #ccc;
+  @apply flex justify-between py-[6px] border-b border-dashed border-[#ccc];
 }
 
 .order-summary {
-  margin-top: 12px;
-  display: flex;
-  justify-content: space-between;
-  font-size: 16px;
-  font-weight: 600;
-  color: #333;
+  @apply mt-[12px] flex justify-between text-[16px] font-semibold text-[#333];
 }
 
 .status {
-  color: #007b5e;
+  @apply text-[#007b5e];
 }
