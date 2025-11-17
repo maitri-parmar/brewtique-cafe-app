@@ -19,10 +19,10 @@ mongoose.connect(process.env.MONGO_URI, {
 .then(() => console.log('MongoDB connected'))
 .catch(err => console.error('MongoDB connection error:', err));
 
-// Routes
+
 app.use('/api/auth', authRoutes);
 
-// Static Menu
+
 let menu = [
  { id: 1, name: 'Americano', price: 250, category: 'coffee',image:'https://i.pinimg.com/1200x/cb/48/db/cb48db04009801523739569e0f33cfc3.jpg'  },
 { id: 2, name: 'Cappuccino', price: 280, category: 'coffee', image:'https://i.pinimg.com/736x/52/41/31/52413159c7f291bbc186422481b3ac50.jpg' },

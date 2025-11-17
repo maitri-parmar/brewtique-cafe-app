@@ -11,7 +11,7 @@ const SignupLogin = () => {
     confirmPassword: '',
   });
 
-  const navigate = useNavigate(); // 👈 React Router hook
+  const navigate = useNavigate(); 
 
   const toggleForm = () => {
     setIsLogin(!isLogin);
@@ -54,7 +54,7 @@ const SignupLogin = () => {
       const data = await res.json();
       if (res.ok) {
         alert(isLogin ? 'Login successful!' : 'Account created!');
-        navigate('/home'); // 👈 Redirect to home page
+        navigate('/home'); 
       } else {
         alert(data.message || 'Something went wrong');
       }
